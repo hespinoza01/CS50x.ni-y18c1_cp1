@@ -5,6 +5,7 @@
   --on-primary: #fff;
   --on-secondary: #696969;
   --box-shadow: 0 0 10px -5px #696969;
+  --border-color: #b9b9b9;
 }
 
 html, body, *, *::before, *::after{
@@ -113,4 +114,32 @@ td, th{
 }
 tbody tr:nth-child(even){
   background-color: var(--primary-alpha);
+}
+
+
+/*  FORM STYLES  */
+.form{
+  width: 35vw;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+
+.form fieldset{
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+.form input[type="text"], .form select{
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+  margin-top: 1rem;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 16px;
 }

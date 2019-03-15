@@ -12,7 +12,7 @@ class Category(Model):
     name = Column(db.Text, nullable=False)
 
     def __repr__(self):
-        return "<Category: {}>".format(self.name)
+        return "{}".format(self.name)
 
 
 class Book(Model):
