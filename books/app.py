@@ -6,11 +6,23 @@ app = Flask(__name__, static_folder="public", template_folder="views")
 
 app.config.from_object(Config)
 
+
 @app.route('/')
 def index():
-    c = Category(name="Hello")
-    print(c)
-    return render("index.html")
+    books = Book.query.all()
+    categories = Category.query.all()
+    return render("index.html", books=books, categories=categories)
+
+
+@app.route('/book')
+def book():
+    return render("book.html")
+
+
+@app.route('/category')
+def category():
+    return render("category.html")
+
 
 if __name__ == "__main__":
     db.init_app(app)

@@ -14,6 +14,7 @@ class Category(Model):
     def __repr__(self):
         return "<Category: {}>".format(self.name)
 
+
 class Book(Model):
     __tablename__ = "Book"
 

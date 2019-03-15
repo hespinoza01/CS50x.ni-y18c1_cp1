@@ -25,6 +25,9 @@ indent_size = 2
 [*.{json,xml,yml,config,props,targets,nuspec,resx,ruleset}]
 indent_size = 2
 
+[*.py]
+indent_size = 4
+
 # Markdown Files
 [*.md]
 trim_trailing_whitespace = false
