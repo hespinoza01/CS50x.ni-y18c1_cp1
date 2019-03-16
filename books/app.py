@@ -6,6 +6,10 @@ from forms import CategoryForm, BookForm
 app = Flask(__name__, static_folder="public", template_folder="views")
 
 app.config.from_object(Config)
+db.init_app(app)
+
+with app.app_context():
+        db.create_all()
 
 
 @app.route('/')
@@ -107,10 +111,5 @@ def book_delete(id=0):
 
 
 if __name__ == "__main__":
-    db.init_app(app)
-
-    with app.app_context():
-        db.create_all()
-
     app.run(port=8000)
 
